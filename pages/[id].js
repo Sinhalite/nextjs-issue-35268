@@ -20,7 +20,7 @@ export async function getStaticProps() {
     while (new Date() - startMsec < waitMsec);
   }
 
-  sleep(10000)
+  sleep(8000)
 
   const currentTime = Date.now()
 
