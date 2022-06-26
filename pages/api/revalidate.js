@@ -1,8 +1,9 @@
 export default async function handler(req, res) {
   try {
-    await res.unstable_revalidate('/test')
-    return res.json({ revalidated: true })
+    await res.revalidate("/test");
+    return res.json({ revalidated: true });
   } catch (err) {
-    return res.status(500).send('Error revalidating')
+    console.log(err);
+    return res.status(500).send("Error revalidating");
   }
 }
